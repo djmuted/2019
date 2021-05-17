@@ -43,8 +43,8 @@ def get_reciprocal_ranks(ps):
 
 def get_average_precision_at3(ps):
     """Calculate average precision at 3."""
-    print("REF:"+ps.reference)
-    print("recs:"+np.array(ps.item_recommendations)[0:3])
+    print("REF:"+str(ps.reference))
+    print("recs:"+str(np.array(ps.item_recommendations)[0:3]))
     ap3 = (ps.reference == np.array(ps.item_recommendations)[0:3]).sum() / 3.0
     return ap3
 
