@@ -63,7 +63,7 @@ def score_submissions(subm_csv, gt_csv):
 
     # append key to submission file
     df_subm_with_key = df_key.join(df_subm, how='inner')
-    df_subm_with_key.reference = df_subm_with_key.reference.astype(int)
+    df_subm_with_key.reference = df_subm_with_key.reference
     df_subm_with_key = convert_string_to_list(
         df_subm_with_key, 'item_recommendations', 'item_recommendations'
     )
